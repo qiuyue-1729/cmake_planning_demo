@@ -8,7 +8,7 @@ project(
 )
 
 set(CMAKE_CXX_STANDARD 17)
-
+include(CTest)
 # 变量设置 动态库以及可执行文件的输出目录
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 set(Process_Dir ${CMAKE_SOURCE_DIR}/src/process)
@@ -26,3 +26,4 @@ if(TARGET Eigen3::Eigen)
 endif()
 # 添加子目录
 add_subdirectory(src)
+add_subdirectory(test/map_test)
